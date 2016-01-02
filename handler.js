@@ -54,7 +54,7 @@ Handler.prototype.handleLESS = function (context) {
                         if (err) {
                             context.error(err);
                         } else {
-                            context.content(output.css, self.server.mime('.css'));
+                            context.send(output.css, self.server.mime('.css'));
                         }
                     });
                 }
